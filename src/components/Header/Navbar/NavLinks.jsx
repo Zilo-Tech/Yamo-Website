@@ -109,7 +109,7 @@ function NavLinks({ screenHeight }) {
       <li>
         <a
           href="#"
-          className={`py-2 px-4 rounded-full text-white font-semibold ${
+          className={`py-2 px-6 rounded text-white font-semibold ${
             screenHeight <= 40 || screenWidth <= 680
               ? "bg-orange-500"
               : "bg-green-500"

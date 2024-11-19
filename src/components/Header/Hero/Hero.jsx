@@ -11,12 +11,17 @@ export default function Hero() {
               Experience Flavors Beyond Compare
             </div>
             <div>
-              Indulge in our exquisite cuisine, crafted with passion and the finest ingredients. Join us for a culinary journey that delights every palate.
+              Indulge in our exquisite cuisine, crafted with passion and the
+              finest ingredients. Join us for a culinary journey that delights
+              every palate.
             </div>
           </div>
-          <button className="py-2 px-4 md:text-xl lg:text-2xl bg-green-500 font-semibold rounded shadow-xl">
+          <a
+            href="#"
+            className="py-2 px-6 md:text-xl lg:text-2xl bg-green-500 font-semibold rounded shadow-xl"
+          >
             View Menu
-          </button>
+          </a>
         </div>
         <div className="heroImage-wrap w-[95%]">
           <img src={hero} alt="Delicious Food" />
