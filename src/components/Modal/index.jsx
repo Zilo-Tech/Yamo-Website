@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavLinks from "../Header/Navbar/NavLinks";
-import logo from "../../assets/logo-bg.svg"
+import logo from "../../assets/logo-bg.svg";
+import "./index.css";
 
 function Modal({ closeModal }) {
   const [isClosing, setIsClosing] = useState(false);
@@ -16,7 +17,7 @@ function Modal({ closeModal }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] overflow-hidden">
       <div
-        className={`bg-white p-5 shadow-lg w-full h-full ${
+        className={`bg-white p-5 shadow-lg w-[90%] rounded-lg ${
           isClosing ? "animate-slideOut" : "animate-slideIn"
         }`}
       >

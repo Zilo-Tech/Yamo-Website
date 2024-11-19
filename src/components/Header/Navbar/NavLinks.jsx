@@ -23,14 +23,16 @@ function NavLinks({ screenHeight }) {
   return (
     <ul
       className={`flex ${
-        screenWidth <= 680 ? "flex-col gap-4 p-2" : "flex-row gap-10"
+        screenWidth <= 680
+          ? "flex-col gap-4 p-2 text-orange-500"
+          : "flex-row gap-10"
       }`}
     >
       <li>
         <a
           href="#"
           className={`group font-semibold flex items-center hover:text-green-500 ${
-            activeLink === "Home" ? "text-green-500" : "text-white"
+            activeLink === "Home" ? "text-green-500" : ""
           }`}
           onClick={() => handleActiveLink("Home")}
         >
@@ -46,7 +48,7 @@ function NavLinks({ screenHeight }) {
         <a
           href="#"
           className={`group font-semibold flex items-center hover:text-green-500 ${
-            activeLink === "Menu" ? "text-green-500" : "text-white"
+            activeLink === "Menu" ? "text-green-500" : ""
           }`}
           onClick={() => handleActiveLink("Menu")}
         >
@@ -62,7 +64,7 @@ function NavLinks({ screenHeight }) {
         <a
           href="#"
           className={`group font-semibold flex items-center hover:text-green-500 ${
-            activeLink === "Services" ? "text-green-500" : "text-white"
+            activeLink === "Services" ? "text-green-500" : ""
           }`}
           onClick={() => handleActiveLink("Services")}
         >
@@ -78,7 +80,7 @@ function NavLinks({ screenHeight }) {
         <a
           href="#"
           className={`group font-semibold flex items-center hover:text-green-500 ${
-            activeLink === "About" ? "text-green-500" : "text-white"
+            activeLink === "About" ? "text-green-500" : ""
           }`}
           onClick={() => handleActiveLink("About")}
         >
@@ -94,7 +96,7 @@ function NavLinks({ screenHeight }) {
         <a
           href="#"
           className={`group font-semibold flex items-center hover:text-green-500 ${
-            activeLink === "Contact" ? "text-green-500" : "text-white"
+            activeLink === "Contact" ? "text-green-500" : ""
           }`}
           onClick={() => handleActiveLink("Contact")}
         >
