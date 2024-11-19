@@ -26,7 +26,7 @@ const data = [
 
 function ServiceList() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full justify-between mt-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full justify-between my-10">
       {data.map((service) => (
         <ServiceCard
           key={service.title}
