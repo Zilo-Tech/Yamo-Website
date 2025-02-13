@@ -2,7 +2,7 @@ import './cardAnimation.css'
 
 export default function Cards({name, location, followers_count, is_verified,  restaurant_image, loading}) {
     return (
-      <div id="restaurantCard" className="w-full max-w-[95%] sm:max-w-[98%] lg:w-full h-[380px] mx-auto border hover:border-orange-500 rounded-lg bg-white">
+      <div id="restaurantCard" className="w-full max-w-[95%] sm:max-w-[98%] lg:w-full h-[380px] mx-auto border hover:border-[#ff601c] rounded-lg bg-white">
           <div className={` image-wrapper p-1 w-full`}>
               <img 
                   id="restaurantImage" 

@@ -18,7 +18,7 @@ function Header({ openModal, screenWidth, scrollHeight }) {
         className={`transition-all duration-300 ease-in-out fixed top-0 left-0 right-0 z-[100] ${
           scrollHeight <= 40
             ? "py-2 text-white"
-            : "bg-orange-500 opacity-90 py-2 text-white"
+            : "bg-[#ff601c] opacity-90 py-2 text-white"
         }`}
       >
         <div className="container max-w-6xl mx-auto flex md:gap-5 items-center justify-between px-2 ">

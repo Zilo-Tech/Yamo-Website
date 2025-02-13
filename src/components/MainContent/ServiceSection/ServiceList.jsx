@@ -26,7 +26,7 @@ const data = [
 
 function ServiceList() {
   return (
-    <div className="relative bg-green-100 py-16 mt-10">
+    <div className="bg-green-100 mt-10 relative  py-16 rounded-b-lg">
       {/* Wavy Background */}
       <svg
         className="absolute -top-10 left-0 w-full"
@@ -40,24 +40,30 @@ function ServiceList() {
           d="M0,96L48,101.3C96,107,192,117,288,144C384,171,480,213,576,208C672,203,768,149,864,133.3C960,117,1056,139,1152,154.7C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         />
       </svg>
+      <div className="container max-w-6xl mx-auto px-4">
 
-      <div className="relative container mx-auto px-5">
-        <h2 className="text-3xl font-bold text-center text-green-600">
-          Our Services
-        </h2>
-        <p className="text-center text-gray-600 mb-10">
-          Discover what we offer to enhance your experience.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {data.map((service) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              desc={service.desc}
-              AwesomeIcon={service.icon}
-            />
-          ))}
+
+
+        <div className="relative container mx-auto px-5">
+          <h2 className="text-3xl font-bold text-center text-green-600">
+            Our Services
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            Discover what we offer to enhance your experience.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {data.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                desc={service.desc}
+                AwesomeIcon={service.icon}
+              />
+            ))}
+          </div>
         </div>
+
+
       </div>
 
       {/* Bottom Wavy Background */}

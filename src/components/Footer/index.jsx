@@ -7,40 +7,40 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Company Section */}
           <div>
-            <h4 className="text-orange-500 font-semibold mb-4">Company</h4>
+            <h4 className="text-[#ff601c] font-semibold mb-4">Company</h4>
             <ul>
-              <li><a className="text-white hover:text-orange-500" href="#">About Us</a></li>
-              <li><a className="text-white hover:text-orange-500" href="#">Contact Us</a></li>
-              <li><a className="text-white hover:text-orange-500" href="#">Reservation</a></li>
-              <li><a className="text-white hover:text-orange-500" href="#">Privacy Policy</a></li>
-              <li><a className="text-white hover:text-orange-500" href="#">Terms & Conditions</a></li>
+              <li><a className="text-white hover:text-[#ff601c]" href="#">About Us</a></li>
+              <li><a className="text-white hover:text-[#ff601c]" href="#">Contact Us</a></li>
+              <li><a className="text-white hover:text-[#ff601c]" href="#">Reservation</a></li>
+              <li><a className="text-white hover:text-[#ff601c]" href="#">Privacy Policy</a></li>
+              <li><a className="text-white hover:text-[#ff601c]" href="#">Terms & Conditions</a></li>
             </ul>
           </div>
 
           {/* Contact Section */}
           <div>
-            <h4 className="text-orange-500 font-semibold mb-4">Contact</h4>
+            <h4 className="text-[#ff601c] font-semibold mb-4">Contact</h4>
             <p className="mb-2"><i className="fa fa-map-marker-alt mr-3"></i>123 Street, New York, USA</p>
             <p className="mb-2"><i className="fa fa-phone-alt mr-3"></i>+012 345 67890</p>
             <p className="mb-2"><i className="fa fa-envelope mr-3"></i>info@example.com</p>
             <div className="flex space-x-4 mt-2">
-              <a className="text-white hover:text-orange-500" href="#"><i className="fab fa-twitter"></i></a>
-              <a className="text-white hover:text-orange-500" href="#"><i className="fab fa-facebook-f"></i></a>
-              <a className="text-white hover:text-orange-500" href="#"><i className="fab fa-youtube"></i></a>
-              <a className="text-white hover:text-orange-500" href="#"><i className="fab fa-linkedin-in"></i></a>
+              <a className="text-white hover:text-[#ff601c]" href="#"><i className="fab fa-twitter"></i></a>
+              <a className="text-white hover:text-[#ff601c]" href="#"><i className="fab fa-facebook-f"></i></a>
+              <a className="text-white hover:text-[#ff601c]" href="#"><i className="fab fa-youtube"></i></a>
+              <a className="text-white hover:text-[#ff601c]" href="#"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
 
           {/* Opening Hours Section */}
           <div>
-            <h4 className="text-orange-500 font-semibold mb-4">Opening Hours</h4>
+            <h4 className="text-[#ff601c] font-semibold mb-4">Opening Hours</h4>
             <p className="text-white">Monday - Saturday: 09AM - 09PM</p>
             <p className="text-white">Sunday: 10AM - 08PM</p>
           </div>
 
           {/* App Download Section */}
           <div>
-            <h4 className="text-orange-500 font-semibold mb-4">Download Our App</h4>
+            <h4 className="text-[#ff601c] font-semibold mb-4">Download Our App</h4>
             <p className="text-white mb-4">Use our app to book a table quickly and easily!</p>
             <div className="flex justify-center items-center space-x-4">
               {/* Google Play Store */}
@@ -68,14 +68,14 @@ const Footer = () => {
       <div className="bg-gray-800 container max-w-6xl mx-auto text-center text-white py-4 mt-4">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
           <div>
-            <p>&copy; <a className="border-b text-white hover:text-orange-500" href="#">Yamo</a>, All Rights Reserved.</p>
+            <p>&copy; <a className="border-b text-white hover:text-[#ff601c]" href="#">Yamo</a>, All Rights Reserved.</p>
           </div>
           <div className="mt-4 sm:mt-0">
             <div className="space-x-4">
-              <a className="text-white hover:text-orange-500" href="#">Home</a>
-              <a className="text-white hover:text-orange-500" href="#">Cookies</a>
-              <a className="text-white hover:text-orange-500" href="#">Help</a>
-              <a className="text-white hover:text-orange-500" href="#">FQAs</a>
+              <a className="text-white hover:text-[#ff601c]" href="#">Home</a>
+              <a className="text-white hover:text-[#ff601c]" href="#">Cookies</a>
+              <a className="text-white hover:text-[#ff601c]" href="#">Help</a>
+              <a className="text-white hover:text-[#ff601c]" href="#">FQAs</a>
             </div>
           </div>
         </div>

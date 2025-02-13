@@ -24,7 +24,7 @@ function NavLinks({ screenHeight }) {
     <ul
       className={`flex ${
         screenWidth <= 680
-          ? "flex-col gap-4 p-2 text-orange-500"
+          ? "flex-col gap-4 p-2 text-[#ff601c]"
           : "flex-row gap-10"
       }`}
     >
@@ -81,7 +81,7 @@ function NavLinks({ screenHeight }) {
           href="#"
           className={`py-2 px-6 rounded text-white font-semibold ${
             screenHeight <= 40 || screenWidth <= 680
-              ? "bg-orange-500"
+              ? "bg-[#ff601c]"
               : "bg-green-500"
           } text-center w-full`}
         >

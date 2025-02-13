@@ -48,14 +48,14 @@ export default function CardList() {
   let [restaurants, setRestaurants] = useState([{}, {}, {}, {}]);
   const [loading, setLoading] = useState(true);
   const Title = () => {
-    return(
-        <div className='text-center mt-10 mb-5' >
-            <h2 className='text-3xl border-b-4 border-green-500 w-fit mx-auto font-semibold text-gray-800 text-center mb-2'>Top Restaurants</h2>
-            <p className='text-gray-800 text-wrap text-center'>From gourmet cuisines to cozy cafés, explore restaurants that redefine taste and hospitality. Find your next favorite spot today!</p>
-        </div>
+    return (
+      <div className='text-center mt-10 mb-5' >
+        <h2 className='text-3xl border-b-4 border-green-500 w-fit mx-auto font-semibold text-gray-800 text-center mb-2'>Top Restaurants</h2>
+        <p className='text-gray-800 text-wrap text-center'>From gourmet cuisines to cozy cafés, explore restaurants that redefine taste and hospitality. Find your next favorite spot today!</p>
+      </div>
     )
   };
-  
+
 
   useEffect(() => {
     const fetchRestaurants = async () => {
@@ -75,25 +75,30 @@ export default function CardList() {
 
   if (loading) {
     return (
-      <div className='max-w-6xl mx-auto px-4'>
-        <Title />
-        <Slider {...settings}>
-          {restaurants.map((restaurant, index) => (
-            <Cards key={index} name={``} location={``} restaurant_image={``} followers_count={``} loading={loading} />
-          ))}
-        </Slider>
+      <div className='container max-w-6xl mx-auto px-4'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <Title />
+          <Slider {...settings}>
+            {restaurants.map((restaurant, index) => (
+              <Cards key={index} name={``} location={``} restaurant_image={``} followers_count={``} loading={loading} />
+            ))}
+          </Slider>
+        </div>
       </div>
     );
   }
 
   return (
     <div className='container max-w-6xl mx-auto px-4'>
-      <Title />
-      <Slider {...settings}>
-        {restaurants.map((restaurant) => (
-          <Cards key={restaurant.id} {...restaurant} />
-        ))}
-      </Slider>
+      <div className='container max-w-6xl mx-auto px-4'>
+        <Title />
+        <Slider {...settings}>
+          {restaurants.map((restaurant) => (
+            <Cards key={restaurant.id} {...restaurant} />
+          ))}
+        </Slider>
+      </div>
     </div>
+
   );
 }
