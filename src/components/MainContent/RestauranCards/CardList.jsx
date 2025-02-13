@@ -78,7 +78,7 @@ export default function CardList() {
       <div className='max-w-6xl mx-auto px-4'>
         <Title />
         <Slider {...settings}>
-          {restaurants.slice(0, 4).map((restaurant, index) => (
+          {restaurants.map((restaurant, index) => (
             <Cards key={index} name={``} location={``} restaurant_image={``} followers_count={``} loading={loading} />
           ))}
         </Slider>
