@@ -90,7 +90,7 @@ export default function CardList() {
     <div className='container max-w-6xl mx-auto px-4'>
       <Title />
       <Slider {...settings}>
-        {restaurants.slice(0, 4).map((restaurant) => (
+        {restaurants.map((restaurant) => (
           <Cards key={restaurant.id} {...restaurant} />
         ))}
       </Slider>
