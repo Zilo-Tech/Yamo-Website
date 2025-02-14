@@ -57,7 +57,7 @@ const Contact = () => {
     <div className="container max-w-6xl mx-auto px-4">
       <div className="bg-white">
         {/* Contact Section */}
-        <div className="container mx-auto py-10 px-5">
+        <div className="container mx-auto py-10 px-1">
           <div className="text-center">
             <h5 className="text-primary text-lg font-semibold">Contact Us</h5>
             <h1 className="text-3xl font-bold">Contact For Any Query</h1>
