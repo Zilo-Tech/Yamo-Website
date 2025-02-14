@@ -9,7 +9,7 @@ function Header({ openModal, screenWidth, scrollHeight }) {
   console.log(scrollHeight);
   return (
     <div
-      className="relative h-fit bg-cover bg-center border"
+      className="relative min-h-screen bg-cover bg-center border mb-10"
       style={{ backgroundImage: `url(${bg_hero})` }}
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -21,7 +21,7 @@ function Header({ openModal, screenWidth, scrollHeight }) {
             : "bg-[#ff601c] opacity-90 py-2 text-white"
         }`}
       >
-        <div className="container max-w-6xl mx-auto flex md:gap-5 items-center justify-between px-2 ">
+        <div className="container max-w-8xl mx-auto flex md:gap-5 items-center justify-between px-2 ">
           <img
             src={scrollHeight <= 40 ? logoYellow : logo}
             alt="Yamo-logo"

@@ -49,9 +49,9 @@ export default function CardList() {
   const [loading, setLoading] = useState(true);
   const Title = () => {
     return (
-      <div className='text-center mt-10 mb-5' >
+      <div className='text-center mt-10 mb-10' >
         <h2 className='text-3xl border-b-4 border-green-500 w-fit mx-auto font-semibold text-gray-800 text-center mb-2'>Top Restaurants</h2>
-        <p className='text-gray-800 text-wrap text-center'>From gourmet cuisines to cozy cafés, explore restaurants that redefine taste and hospitality. Find your next favorite spot today!</p>
+        <p className='text-gray-800 text-wrap text-center md:text-xl '>From gourmet cuisines to cozy cafés,  <br /> explore restaurants that redefine taste and hospitality. Find your next favorite spot today!</p>
       </div>
     )
   };
@@ -75,8 +75,8 @@ export default function CardList() {
 
   if (loading) {
     return (
-      <div className='container max-w-6xl mx-auto px-4'>
-        <div className='max-w-6xl mx-auto px-4'>
+      <div className='container max-w-8xl mx-auto px-4'>
+        <div className='max-w-8xl mx-auto px-3'>
           <Title />
           <Slider {...settings}>
             {restaurants.map((restaurant, index) => (
@@ -89,8 +89,8 @@ export default function CardList() {
   }
 
   return (
-    <div className='container max-w-6xl mx-auto px-4'>
-      <div className='container max-w-6xl mx-auto px-4'>
+    <div className='container max-w-8xl mx-auto px-4'>
+      <div className='container max-w-8xl mx-auto px-3'>
         <Title />
         <Slider {...settings}>
           {restaurants.map((restaurant) => (

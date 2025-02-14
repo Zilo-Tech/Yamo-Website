@@ -54,7 +54,7 @@ const Contact = () => {
   const phoneNumberValue = watch("phoneNumber"); // Watch for changes to phoneNumber
 
   return (
-    <div className="container max-w-6xl mx-auto px-4">
+    <div className="container max-w-8xl mx-auto px-4">
       <div className="bg-white">
         {/* Contact Section */}
         <div className="container mx-auto py-10 px-1">

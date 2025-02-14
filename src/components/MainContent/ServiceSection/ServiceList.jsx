@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
 
+
 const data = [
   {
     title: "Master Chefs",
@@ -26,7 +27,7 @@ const data = [
 
 function ServiceList() {
   return (
-    <div className="bg-green-100 mt-10 relative  py-16 rounded-b-lg">
+    <div className="bg-green-100 mt-10 relative  pt-28 rounded-b-lg min-h-screen">
       {/* Wavy Background */}
       <svg
         className="absolute -top-10 left-0 w-full"
@@ -40,7 +41,7 @@ function ServiceList() {
           d="M0,96L48,101.3C96,107,192,117,288,144C384,171,480,213,576,208C672,203,768,149,864,133.3C960,117,1056,139,1152,154.7C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         />
       </svg>
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="container max-w-8xl mx-auto px-4">
 
 
 
