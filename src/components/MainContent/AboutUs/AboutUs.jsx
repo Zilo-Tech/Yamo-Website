@@ -80,12 +80,14 @@ function AboutUs() {
             </div>
 
             {/* Read More Button */}
-            <a
+           <div className="flex justify-center md:justify-start">
+           <a
               href="#"
-              className="inline-block bg-[#ff601c] text-white py-3 px-8 rounded-lg font-semibold hover:bg-[#e65a1a] transition duration-300"
+              className="inline-block bg-[#ff601c] text-white py-2 px-5 rounded-lg font-semibold hover:bg-[#e65a1a] transition duration-300"
             >
               Read More
             </a>
+           </div>
           </div>
         </div>
       </div>
