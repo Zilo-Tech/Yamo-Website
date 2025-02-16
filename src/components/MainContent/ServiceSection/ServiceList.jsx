@@ -27,7 +27,7 @@ const data = [
 
 function ServiceList() {
   return (
-    <div className="bg-green-100 mt-10 relative  pt-28 rounded-b-lg min-h-screen">
+    <div className="bg-green-100 mt-10 relative  pt-28 rounded-b-lg h-fit lg:min-h-screen py-2">
       {/* Wavy Background */}
       <svg
         className="absolute -top-10 left-0 w-full"

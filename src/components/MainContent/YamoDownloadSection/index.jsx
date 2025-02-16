@@ -4,7 +4,7 @@ import yamo from '../../../assets/Yamo/Yamo Preview.jpg'
 const YamoDownloadSection = () => {
 
   return (
-    <section className="bg-green-500 rounded-lg min-h-screen">
+    <section className="bg-green-500 rounded-lg h-fit lg:min-h-screen py-2">
       <div className="container max-w-8xl mx-auto px-6 mt-16 text-white py-5 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="space-y-6">
