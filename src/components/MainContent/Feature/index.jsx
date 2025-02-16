@@ -3,7 +3,7 @@ import ndole from '../../../assets/ndole.jpeg'
 
 const YamoApp = () => {
   return (
-    <div className="relative overflow-hidden bg-red-100 text-gray-800 rounded-full my-20">
+    <div className="relative overflow-hidden  text-gray-800 rounded-flg my-20">
 
 
       {/* Content Container */}
