@@ -8,7 +8,7 @@ import logo from "../../../assets/logo-bg.svg";
 function AboutUs() {
   return (
     <div className="container max-w-8xl mx-auto px-10">
-      <div className="py-16 min-h-screen">
+      <div className="py-16 h-fit lg:min-h-screen">
         <div className="container  mx-auto">
           <div className="flex flex-col gap-10 lg:flex-row items-center justify-center">
             <div className="lg:w-1/2 w-full">
