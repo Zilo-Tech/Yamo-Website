@@ -12,7 +12,7 @@ const YamoApp = () => {
         <div className="elementor-column text-center flex flex-col items-center">
           <div className="elementor-widget-wrap">
             <img
-              src="https://via.placeholder.com/400x250?text=Discover+Yamo"
+              src="https://cdn.tripinafrica.com/800x400/places/le-glacier-moderne-0zoZxeTKbl.webp"
               alt="Discover Yamo"
               className="w-full h-48 object-cover rounded-lg mb-6"
             />
@@ -48,7 +48,7 @@ const YamoApp = () => {
         <div className="elementor-column text-center flex flex-col items-center">
           <div className="elementor-widget-wrap">
             <img
-              src="https://via.placeholder.com/400x250?text=Order+Your+Favorite+Meals"
+              src="https://plus.unsplash.com/premium_photo-1712736395898-02844eeb1968?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtZXJvb24lMjAlMjByZXN0YXVyYW50c3xlbnwwfHwwfHx8MA%3D%3D"
               alt="Order Your Favorite Meals"
               className="w-full h-48 object-cover rounded-lg mb-6"
             />
@@ -58,7 +58,7 @@ const YamoApp = () => {
             </p>
             <a
               href="/download-yamo"
-              className="inline-block bg-[#ff601c] text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors"
+              className="inline-block bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors"
             >
               Download Yamo
             </a>
