@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import MainContent from "./components/MainContent";
+import Footer from './components/Footer'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,6 +48,7 @@ function App() {
       />
       {isModalOpen && screenWidth <= 680 && <Modal closeModal={closeModal} />}
       <MainContent />
+      <Footer/>
     </div>
   );
 }

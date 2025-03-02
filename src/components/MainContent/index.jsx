@@ -1,13 +1,20 @@
 import AboutUs from "./AboutUs/AboutUs";
+import Contact from "./Contact";
+import YamoApp from "./Feature";
+import CardList from "./RestauranCards/CardList";
 import ServiceList from "./ServiceSection/ServiceList";
-import ContactForm from "./ContactForm";
+import YamoDownloadSection from "./YamoDownloadSection";
+
 
 const MainContent = () => {
   return (
-    <div className="container max-w-6xl mx-auto px-4">
+    <div className="">
       <ServiceList />
       <AboutUs />
-      <ContactForm />
+      <CardList />
+      <YamoApp />
+      <YamoDownloadSection />
+      <Contact />
     </div>
   );
 };

@@ -7,35 +7,36 @@ import logo from "../../../assets/logo-bg.svg";
 
 function AboutUs() {
   return (
-    <div className="py-16">
-      <div className="container  mx-auto">
-        <div className="flex flex-col gap-10 lg:flex-row items-center justify-center">
+    <div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
+          {/* Image Grid Section */}
           <div className="lg:w-1/2 w-full">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="col-span-1 text-left">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="col-span-1">
                 <img
-                  className="img-fluid rounded w-full transition-transform transform hover:scale-105"
+                  className="rounded-lg shadow-lg w-full h-64 object-cover transform transition duration-500 hover:scale-105"
                   src={img1}
                   alt="About Us 1"
                 />
               </div>
-              <div className="col-span-1 text-left">
+              <div className="col-span-1">
                 <img
-                  className="img-fluid rounded w-3/4 mt-6 transition-transform transform hover:scale-105"
+                  className="rounded-lg shadow-lg w-full h-64 object-cover transform transition duration-500 hover:scale-105 mt-8"
                   src={img2}
                   alt="About Us 2"
                 />
               </div>
-              <div className="col-span-1 text-right">
+              <div className="col-span-1">
                 <img
-                  className="img-fluid rounded w-3/4 transition-transform transform hover:scale-105"
+                  className="rounded-lg shadow-lg w-full h-64 object-cover transform transition duration-500 hover:scale-105"
                   src={img3}
                   alt="About Us 3"
                 />
               </div>
-              <div className="col-span-1 text-right">
+              <div className="col-span-1">
                 <img
-                  className="img-fluid rounded w-full transition-transform transform hover:scale-105"
+                  className="rounded-lg shadow-lg w-full h-64 object-cover transform transition duration-500 hover:scale-105 mt-8"
                   src={img4}
                   alt="About Us 4"
                 />
@@ -43,48 +44,50 @@ function AboutUs() {
             </div>
           </div>
 
+          {/* Text Content Section */}
           <div className="lg:w-1/2 w-full">
-            <h5 className="text-2xl font-semibold text-orange-500">About Us</h5>
-            <h1 className="mb-4 text-4xl font-bold flex items-center gap-2">
+            <h5 className="text-2xl font-semibold text-[#ff601c] mb-2">About Us</h5>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 flex items-center gap-2">
               <span>Welcome to</span>
-              <img src={logo} width={40} alt="" />
+              <img src={logo} width={50} alt="Logo" />
             </h1>
-            <p className="mb-4 text-gray-700">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem
-              sit.
+            <p className="mb-6 text-gray-700 leading-relaxed">
+              Welcome to Yamo Restaurant, where exceptional flavors meet a warm and inviting atmosphere.
+              We take pride in serving delicious, carefully crafted dishes made from the finest ingredients.
             </p>
-            <p className="mb-4 text-gray-700">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet.
+            <p className="mb-6 text-gray-700 leading-relaxed">
+              Whether you're here for a casual meal, a special occasion, or a culinary adventure,
+              Yano Restaurant offers an unforgettable dining experience with a menu that celebrates
+              both tradition and innovation.
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="flex items-center border-l-4 border-orange-500 pl-4">
-                <h1 className="flex-shrink-0 text-4xl text-orange-500 mb-0">
-                  15
-                </h1>
-                <div className="pl-4">
-                  <p className="mb-0">Years of</p>
-                  <h6 className="uppercase mb-0">Experience</h6>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div className="flex items-center p-4 bg-white rounded-lg shadow-md border-l-4 border-[#ff601c]">
+                <h1 className="text-4xl font-bold text-[#ff601c] mr-4">15</h1>
+                <div>
+                  <p className="text-sm text-gray-600">Years of</p>
+                  <h6 className="text-lg font-semibold uppercase">Experience</h6>
                 </div>
               </div>
-              <div className="flex items-center border-l-4 border-orange-500 pl-4">
-                <h1 className="flex-shrink-0 text-4xl text-orange-500 mb-0">
-                  50
-                </h1>
-                <div className="pl-4">
-                  <p className="mb-0">Popular</p>
-                  <h6 className="uppercase mb-0">Master Chefs</h6>
+              <div className="flex items-center p-4 bg-white rounded-lg shadow-md border-l-4 border-[#ff601c]">
+                <h1 className="text-4xl font-bold text-[#ff601c] mr-4">50</h1>
+                <div>
+                  <p className="text-sm text-gray-600">Popular</p>
+                  <h6 className="text-lg font-semibold uppercase">Master Chefs</h6>
                 </div>
               </div>
             </div>
-            <a
-              className="btn bg-orange-500 text-white py-3 px-6 mt-2 inline-block"
-              href=""
+
+            {/* Read More Button */}
+           <div className="flex justify-center md:justify-start">
+           <a
+              href="#"
+              className="inline-block bg-[#ff601c] text-white py-2 px-5 rounded-lg font-semibold hover:bg-[#e65a1a] transition duration-300"
             >
               Read More
             </a>
+           </div>
           </div>
         </div>
       </div>
