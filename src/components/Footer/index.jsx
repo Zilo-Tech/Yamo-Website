@@ -20,9 +20,9 @@ const Footer = () => {
           {/* Contact Section */}
           <div>
             <h4 className="text-[#ff601c] font-semibold mb-4">Contact</h4>
-            <p className="mb-2"><i className="fa fa-map-marker-alt mr-3"></i>123 Street, New York, USA</p>
-            <p className="mb-2"><i className="fa fa-phone-alt mr-3"></i>+012 345 67890</p>
-            <p className="mb-2"><i className="fa fa-envelope mr-3"></i>info@example.com</p>
+            <p className="mb-2"><i className="fa fa-map-marker-alt mr-3"></i>Bamenda, Cameroon</p>
+            <p className="mb-2"><i className="fa fa-phone-alt mr-3"></i>+237 681-775-574</p>
+            <p className="mb-2"><i className="fa fa-envelope mr-3"></i>info@zilotech.org</p>
             <div className="flex space-x-4 mt-2">
               <a className="text-white hover:text-[#ff601c]" href="#"><i className="fab fa-twitter"></i></a>
               <a className="text-white hover:text-[#ff601c]" href="#"><i className="fab fa-facebook-f"></i></a>

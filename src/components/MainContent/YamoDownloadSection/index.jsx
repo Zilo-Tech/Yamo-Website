@@ -9,11 +9,10 @@ const YamoDownloadSection = () => {
         {/* Left Content */}
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Download Yamo App</h2>
-          <p className="md:text-xl p-3">
-            Experience top-tier delivery services with <b>Yamo</b>, your go-to platform for
-            <b> food</b> and <b>drinks</b>, catering to the bustling cities of
-            <strong> Douala, Buea, and Limbe</strong>. Enjoy seamless ordering and fast delivery from your favorite local restaurants, anytime, anywhere.
-          </p>
+         <p className="md:text-xl p-3">
+          Discover the ultimate food booking experience with <b>Yamo</b>, the go-to platform for ordering and selling delicious home-cooked meals across <strong>Cameroon</strong>. Whether you're a food lover looking for homemade flavors or a chef ready to share your dishes, Yamo connects you with the best local meals, anytime, anywhere.
+        </p>
+
           <div className="flex gap-4  items-center">
             <a href="https://play.google.com/store/apps/details?id=com.yamo.ordering" target="_blank" rel="noopener noreferrer">
               <img

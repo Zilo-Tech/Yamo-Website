@@ -49,16 +49,13 @@ function AboutUs() {
             <h5 className="text-2xl font-semibold text-[#ff601c] mb-2">About Us</h5>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 flex items-center gap-2">
               <span>Welcome to</span>
-              <img src={logo} width={50} alt="Logo" />
+              <img src={logo} width={50} alt="Yamo Logo" />
             </h1>
             <p className="mb-6 text-gray-700 leading-relaxed">
-              Welcome to Yamo Restaurant, where exceptional flavors meet a warm and inviting atmosphere.
-              We take pride in serving delicious, carefully crafted dishes made from the finest ingredients.
+              Welcome to Yamo, the ultimate platform for food lovers in Cameroon! Yamo connects you with the best local restaurants and small food businesses, allowing you to easily book delicious, ready-to-eat meals and have them delivered straight to your location.
             </p>
             <p className="mb-6 text-gray-700 leading-relaxed">
-              Whether you're here for a casual meal, a special occasion, or a culinary adventure,
-              Yano Restaurant offers an unforgettable dining experience with a menu that celebrates
-              both tradition and innovation.
+              For restaurants and food vendors, Yamo provides a powerful tool to showcase your culinary creations, reach more customers, and grow your business. Whether you're craving traditional Cameroonian dishes or exploring new flavors, Yamo brings the best of local cuisine right to your doorstep.
             </p>
 
             {/* Stats Section */}
@@ -71,23 +68,23 @@ function AboutUs() {
                 </div>
               </div>
               <div className="flex items-center p-4 bg-white rounded-lg shadow-md border-l-4 border-[#ff601c]">
-                <h1 className="text-4xl font-bold text-[#ff601c] mr-4">50</h1>
+                <h1 className="text-4xl font-bold text-[#ff601c] mr-4">50+</h1>
                 <div>
-                  <p className="text-sm text-gray-600">Popular</p>
-                  <h6 className="text-lg font-semibold uppercase">Master Chefs</h6>
+                  <p className="text-sm text-gray-600">Active</p>
+                  <h6 className="text-lg font-semibold uppercase">Restaurants</h6>
                 </div>
               </div>
             </div>
 
             {/* Read More Button */}
-           <div className="flex justify-center md:justify-start">
-           <a
-              href="#"
-              className="inline-block bg-[#ff601c] text-white py-2 px-5 rounded-lg font-semibold hover:bg-[#e65a1a] transition duration-300"
-            >
-              Read More
-            </a>
-           </div>
+            <div className="flex justify-center md:justify-start">
+              <a
+                href="#"
+                className="inline-block bg-[#ff601c] text-white py-2 px-5 rounded-lg font-semibold hover:bg-[#e65a1a] transition duration-300"
+              >
+                Read More
+              </a>
+            </div>
           </div>
         </div>
       </div>

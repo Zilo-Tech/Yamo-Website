@@ -8,8 +8,8 @@ const contactSchema = z.object({
   email: z.string().email("Invalid email address"),
   phoneNumber: z
     .string()
-    .min(11, "Number must be at least 11 characters (e.g., 123-456-789)") // Adjusted for formatted input
-    .max(11, "Number must be at most 12 characters (e.g., 123-456-7890)")
+    .min(9, "Number must be at least 11 characters (e.g., 123-456-789)") // Adjusted for formatted input
+    .max(9, "Number must be at most 12 characters (e.g., 123-456-7890)")
     .regex(/^\d{3}-\d{3}-\d{3}$/, "Invalid phone number format (e.g., 123-456-789)"),
   message: z.string().min(20, "Message must be at least 20 characters"),
 });

@@ -4,26 +4,27 @@ import ServiceCard from "./ServiceCard";
 
 const data = [
   {
-    title: "Master Chefs",
-    desc: "Our team of expert chefs brings a world of flavors to your plate, ensuring an unforgettable dining experience.",
-    icon: "fa-user-tie",
+    title: "Sell Your Dishes",
+    desc: "Home cooks and professional chefs can list and sell their delicious meals to a wide audience.",
+    icon: "fa-utensils",
   },
   {
-    title: "Quality Service",
-    desc: "We strive to provide top-notch service that exceeds customer expectations.",
-    icon: "fa-cogs",
+    title: "Order Meals",
+    desc: "Discover and order freshly prepared dishes from talented local cooks and top tier restaurants near you.",
+    icon: "fa-shopping-basket",
   },
   {
-    title: "Online Ordering",
-    desc: "Order your favorite meals from anywhere, anytime, with our easy-to-use online system.",
-    icon: "fa-shopping-cart",
+    title: "Fast & Reliable Delivery",
+    desc: "Get your favorite meals delivered quickly, ensuring freshness and quality at your doorstep.",
+    icon: "fa-motorcycle",
   },
   {
-    title: "24/7 Service",
-    desc: "Enjoy round-the-clock service for all your dining needs, no matter the time of day.",
-    icon: "fa-clock",
+    title: "Secure Payments",
+    desc: "Seamless and secure payment options for both buyers and sellers, ensuring smooth transactions.",
+    icon: "fa-lock",
   },
 ];
+
 
 function ServiceList() {
   return (
