@@ -10,7 +10,7 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -31,7 +31,7 @@ const settings = {
 };
 
 export default function CardList() {
-  const [restaurants, setRestaurants] = useState([{}, {}, {}, {}]);
+  const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const Title = () => (
@@ -50,6 +50,7 @@ export default function CardList() {
     const fetchRestaurants = async () => {
       try {
         const { data } = await axios.get('https://yamo-api-endpoints.onrender.com/api/restaurants/');
+        console.log('Fetched restaurants:', data.results);
         setRestaurants(data.results || []);
       } catch (error) {
         console.error('Error fetching restaurants:', error);
@@ -61,20 +62,33 @@ export default function CardList() {
     fetchRestaurants();
   }, []);
 
+  if (loading) {
+    return (
+      <div className='container max-w-8xl mx-auto px-4'>
+        <div className='max-w-8xl mx-auto px-3'>
+          <Title />
+          <Slider {...settings}>
+            {Array.from({ length: 3 }).map((_, index) => (
+              <Cards key={index} name={``} location={``} restaurant_image={``} followers_count={``} loading={loading} />
+            ))}
+          </Slider>
+        </div>
+      </div>
+    );
+  }
+
+  console.log('Restaurants to display:', restaurants);
+
   return (
     <div className="container max-w-8xl mx-auto px-4">
       <div className="max-w-8xl mx-auto px-3">
         <Title />
         <Slider {...settings}>
           {restaurants.map((restaurant, index) => (
-            <Cards 
-              key={restaurant.id || index} 
-              {...(loading ? { name: '', location: '', restaurant_image: '', followers_count: '', loading } : restaurant)}
-            />
+            <Cards {...restaurant} key={restaurant.id || index} loading={loading} />
           ))}
         </Slider>
       </div>
     </div>
   );
 }
-

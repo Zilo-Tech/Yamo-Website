@@ -25,3 +25,15 @@
       transform: translateX(100%);
     }
   }
+
+  /* Add this to your CSS file */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-list {
+  display: flex;
+  flex-direction: row;
+}
