@@ -1,38 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Utensils, ShoppingBasket, Bike, Lock } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
-
-const data = [
-  {
-    title: "Sell Your Dishes",
-    desc: "Home cooks and professional chefs can list and sell their delicious meals to a wide audience.",
-    icon: "fa-utensils",
-  },
-  {
-    title: "Order Meals",
-    desc: "Discover and order freshly prepared dishes from talented local cooks and top tier restaurants near you.",
-    icon: "fa-shopping-basket",
-  },
-  {
-    title: "Fast & Reliable Delivery",
-    desc: "Get your favorite meals delivered quickly, ensuring freshness and quality at your doorstep.",
-    icon: "fa-motorcycle",
-  },
-  {
-    title: "Secure Payments",
-    desc: "Seamless and secure payment options for both buyers and sellers, ensuring smooth transactions.",
-    icon: "fa-lock",
-  },
-];
-
-
 function ServiceList() {
+  const data = [
+    {
+      title: "Sell Your Dishes",
+      desc: "Home cooks and professional chefs can list and sell their delicious meals to a wide audience.",
+      Icon: Utensils,
+    },
+    {
+      title: "Order Meals",
+      desc: "Discover and order freshly prepared dishes from talented local cooks and top tier restaurants near you.",
+      Icon: ShoppingBasket,
+    },
+    {
+      title: "Fast & Reliable Delivery",
+      desc: "Get your favorite meals delivered quickly, ensuring freshness and quality at your doorstep.",
+      Icon: Bike,
+    },
+    {
+      title: "Secure Payments",
+      desc: "Seamless and secure payment options for both buyers and sellers, ensuring smooth transactions.",
+      Icon: Lock,
+    },
+  ];
+
   return (
-    <div className="bg-green-100 mt-10 relative  pt-28 rounded-b-lg h-fit lg:min-h-screen py-2">
-      {/* Wavy Background */}
+    <div className="bg-gradient-to-b from-green-50 to-green-100 py-28 relative overflow-hidden">
+      {/* Wavy Background Top */}
       <svg
-        className="absolute -top-10 left-0 w-full"
-        viewBox="0 0 1440 320"
+        className="absolute top-0 left-0 w-full"
+        viewBox="0 0 1440 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -42,36 +42,45 @@ function ServiceList() {
           d="M0,96L48,101.3C96,107,192,117,288,144C384,171,480,213,576,208C672,203,768,149,864,133.3C960,117,1056,139,1152,154.7C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         />
       </svg>
-      <div className="container max-w-8xl mx-auto px-4">
 
-
-
-        <div className="relative container mx-auto px-5">
-          <h2 className="text-3xl font-bold text-center text-green-600">
+      <div className="container max-w-7xl mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-green-600 mb-3">
             Our Services
           </h2>
-          <p className="text-center text-gray-600 mb-10">
-            Discover what we offer to enhance your experience.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-10">
+            Discover what we offer to enhance your culinary experience
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.map((service) => (
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {data.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <ServiceCard
-                key={service.title}
                 title={service.title}
                 desc={service.desc}
-                AwesomeIcon={service.icon}
+                Icon={service.Icon}
               />
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
-
-
       </div>
 
-      {/* Bottom Wavy Background */}
+      {/* Wavy Background Bottom */}
       <svg
-        className="absolute -bottom-32 left-0 w-full"
-        viewBox="0 0 1440 320"
+        className="absolute bottom-0 left-0 w-full"
+        viewBox="0 0 1440 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

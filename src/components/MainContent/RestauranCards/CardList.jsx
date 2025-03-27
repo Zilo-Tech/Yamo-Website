@@ -1,19 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Cards from './Cards';
+import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { ChefHat, ChevronRight, ChevronLeft } from 'lucide-react';
+import Cards from './Cards';
+import { div } from 'framer-motion/client';
 
-// Slider settings with autoplay enabled
+const NextArrow = (props) => (
+  <div {...props} className="slick-next-arrow">
+    <ChevronRight className="w-6 h-6 text-white bg-green-500 rounded-full p-1" />
+  </div>
+);
+
+const PrevArrow = (props) => (
+  <div {...props} className="slick-prev-arrow">
+    <ChevronLeft className="w-6 h-6 text-white bg-green-500 rounded-full p-1" />
+  </div>
+);
+
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 800,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay: true, // Enable autoplay
-  autoplaySpeed: 3000, // Set autoplay speed in milliseconds (e.g., 3000ms = 3 seconds)
+  autoplay: true,
+  autoplaySpeed: 3000,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
   responsive: [
     {
       breakpoint: 1024,
@@ -42,21 +58,41 @@ const settings = {
   ],
 };
 
-
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
 
 export default function CardList() {
-  let [restaurants, setRestaurants] = useState([{}, {}, {}, {}]);
+  const [restaurants, setRestaurants] = useState([]); // Initialize with empty objects for skeletons
   const [loading, setLoading] = useState(true);
-  const Title = () => {
-    return (
-      <div className='text-center mt-10 mb-10' >
-        <h2 className='text-3xl border-b-4 border-green-500 w-fit mx-auto font-semibold text-gray-800 text-center mb-2'>Top Restaurants</h2>
-        <p className='text-gray-800 text-wrap text-center md:text-xl '>From gourmet cuisines to cozy cafés,  <br /> explore restaurants that redefine taste and hospitality. Find your next favorite spot today!</p>
+
+  const Title = () => (
+    <motion.div 
+      className='text-center mt-10 mb-10'
+    >
+      <div className="flex items-center justify-center gap-2 mb-4">
+        <ChefHat className="w-8 h-8 text-green-500" />
+        <h2 className='text-3xl font-semibold text-gray-800 text-center'>
+          Top Restaurants
+        </h2>
       </div>
-    )
-  };
+      <motion.p 
+      
+        className='text-gray-600 text-wrap text-center md:text-lg max-w-2xl mx-auto'
+      >
+        From gourmet cuisines to cozy cafés, explore restaurants that redefine taste and hospitality.
+      </motion.p>
+    </motion.div>
+  );
 
-
+ 
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
@@ -72,33 +108,27 @@ export default function CardList() {
     };
     fetchRestaurants();
   }, []);
-
-  if (loading) {
-    return (
-      <div className='container max-w-8xl mx-auto px-4'>
-        <div className='max-w-8xl mx-auto px-3'>
-          <Title />
-          <Slider {...settings}>
-            {restaurants.map((restaurant, index) => (
-              <Cards key={index} name={``} location={``} restaurant_image={``} followers_count={``} loading={loading} />
-            ))}
-          </Slider>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className='container max-w-8xl mx-auto px-4'>
+    <div className='bg-slate-100'>
+      <motion.div 
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className='container max-w-7xl mx-auto px-4 py-8'
+    >
       <div className='container max-w-8xl mx-auto px-3'>
         <Title />
         <Slider {...settings}>
-          {restaurants.map((restaurant) => (
-            <Cards key={restaurant.id} {...restaurant} />
+          {restaurants.map((restaurant, index) => (
+            <Cards 
+              key={loading ? `skeleton-${index}` : restaurant.id} 
+              loading={loading} 
+              {...restaurant} 
+            />
           ))}
         </Slider>
       </div>
+    </motion.div>
     </div>
-
   );
 }

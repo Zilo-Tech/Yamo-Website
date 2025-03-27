@@ -1,31 +1,37 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar/index";
+import { motion } from "framer-motion";
+import Navbar from "./Navbar";
 import logo from "../../assets/logo-white.svg";
 import logoYellow from "../../assets/logo-bg.svg";
 import Hero from "./Hero/Hero";
-import bg_hero from "../../assets/hero.svg"; // Import background image
+import bg_hero from "../../assets/hero.svg";
 
 function Header({ openModal, screenWidth, scrollHeight }) {
-  console.log(scrollHeight);
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center border mb-10"
+    <motion.div 
+      className="relative min-h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg_hero})` }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div
-        className={`transition-all duration-300 ease-in-out fixed top-0 left-0 right-0 z-[100] ${
+      <motion.header
+        className={` top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           scrollHeight <= 40
-            ? "py-2 text-white"
-            : "bg-[#ff601c] opacity-90 py-2 text-white"
+            ? "py-3 bg-transparent"
+            : "py-2  backdrop-blur-sm"
         }`}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 300 }}
       >
-        <div className="container max-w-8xl mx-auto flex md:gap-5 items-center justify-between px-2 ">
-          <img
+        <div className="container max-w-7xl mx-auto flex items-center justify-between md:px-2 lg:px-0">
+          <motion.img
             src={scrollHeight <= 40 ? logoYellow : logo}
-            alt="Yamo-logo"
-            className="h-10 w-10 sm:h-16 sm:w-10 lg:h-20 lg:w-20"
+            alt="Yamo Logo"
+            className="h-12 w-12 md:h-16 md:w-16"
+            whileHover={{ rotate: 15 }}
           />
           <Navbar
             screenHeight={scrollHeight}
@@ -33,9 +39,10 @@ function Header({ openModal, screenWidth, scrollHeight }) {
             openModal={openModal}
           />
         </div>
-      </div>
+      </motion.header>
+      
       <Hero />
-    </div>
+    </motion.div>
   );
 }
 

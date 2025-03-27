@@ -1,5 +1,6 @@
 import AboutUs from "./AboutUs/AboutUs";
 import Contact from "./Contact";
+import ContactForm from "./ContactForm";
 import YamoApp from "./Feature";
 import CardList from "./RestauranCards/CardList";
 import ServiceList from "./ServiceSection/ServiceList";
@@ -14,7 +15,7 @@ const MainContent = () => {
       <CardList />
       <YamoApp />
       <YamoDownloadSection />
-      <Contact />
+      <ContactForm />
     </div>
   );
 };

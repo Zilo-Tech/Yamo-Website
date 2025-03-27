@@ -15,8 +15,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
-      if (window.innerWidth > 680 && isModalOpen) {
-        closeModal(); // Automatically close modal on larger screens
+      if (isModalOpen) {
         document.body.style.overflow = "auto"; // Re-enable scroll
       }
     };
