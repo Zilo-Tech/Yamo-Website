@@ -69,8 +69,8 @@ export default function Hero() {
               whileHover={{ x: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              View Menu
-              <ChevronRight className="w-5 h-5" />
+              Download Yamo
+              
             </motion.a>
           </motion.div>
         </motion.div>

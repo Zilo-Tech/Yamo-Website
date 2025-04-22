@@ -93,7 +93,7 @@ function AboutUs() {
             viewport={{ once: true }}
           >
             {[
-              { value: "15", label: "Years of Experience", icon: <Clock className="w-6 h-6 text-[#ff601c]" /> },
+              { value: "2k+", label: "Satisfied Clients", icon: <Users className="w-6 h-6 text-[#ff601c]" /> },
               { value: "50+", label: "Active Restaurants", icon: <Utensils className="w-6 h-6 text-[#ff601c]" /> }
             ].map((stat, index) => (
               <motion.div

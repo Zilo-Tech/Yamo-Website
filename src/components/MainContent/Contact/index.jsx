@@ -37,7 +37,7 @@ const RestaurantCard = ({ restaurant }) => (
         whileTap={{ scale: 0.98 }}
       >
         <CalendarDays size={16} />
-        Book Table
+        Book Table 
       </motion.button>
     </div>
   </motion.div>

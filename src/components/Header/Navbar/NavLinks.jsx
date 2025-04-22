@@ -55,8 +55,8 @@ function NavLinks({ screenHeight }) {
           } transition-colors`}
         >
           <span className="flex items-center gap-2">
-            <Utensils className="w-4 h-4" />
-            Book a Table
+            
+            Download
           </span>
         </button>
       </motion.li>

@@ -15,7 +15,7 @@ const MainContent = () => {
       <CardList />
       <YamoApp />
       <YamoDownloadSection />
-      <ContactForm />
+      {/* <ContactForm /> */}
     </div>
   );
 };
