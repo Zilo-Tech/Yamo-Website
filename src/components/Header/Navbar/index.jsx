@@ -9,11 +9,11 @@ function Navbar({ screenWidth, screenHeight, openModal }) {
       {screenWidth <= 680 ? (
         <motion.button 
           onClick={openModal} 
-          className="p-2 rounded-lg  hover:bg-white/20 transition-colors"
+          className="p-2 rounded-lg bg-orange-100"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Menu className="w-6 h-6 text-white" />
+          <Menu className="w-6 h-6 text-gray-800" />
         </motion.button>
       ) : (
         <NavLinks screenHeight={screenHeight} />
