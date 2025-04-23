@@ -1,20 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Utensils, Users, Clock, Award } from "lucide-react";
-import img1 from "../../../assets/about-1.jpg";
-import img2 from "../../../assets/about-2.jpg";
-import img3 from "../../../assets/about-3.jpg";
+import img1 from "../../../assets/Find food you love vector 1-1.svg";
+import img2 from "../../../assets/Add an item After.jpg";
+import img3 from "../../../assets/Buy Now.jpg";
 import img4 from "../../../assets/about-4.jpg";
 import logo from "../../../assets/logo-bg.svg";
+import { div } from "framer-motion/client";
+import yamo from '../../../assets/Ellipse 9.png';
+
 
 function AboutUs() {
   return (
-    <motion.div 
+    <div className=" relative">
+      <img src={yamo} className="absolute" alt="" />
+      <img src={yamo} className="absolute right-0" alt="" />
+      <img src={yamo} className="absolute top-1/2 left-1/2" alt="" />
+       <motion.div 
       className="container max-w-7xl mx-auto px-4 py-16 lg:py-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
     >
+
       <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         {/* Image Grid Section */}
         <motion.div 
@@ -24,22 +32,22 @@ function AboutUs() {
           transition={{ type: "spring" }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
-            {[img1, img2, img3, img4].map((img, index) => (
+          <div className="grid grid-cols-2 gap-4">
+            {[img1, img2,].map((img, index) => (
               <motion.div
                 key={index}
-                className={`relative overflow-hidden rounded-xl shadow-lg ${index % 2 === 1 ? 'mt-8' : ''}`}
+                className={`relative overflow- rounded-xl${index % 2 === 1 ? 'mt-8' : ''}`}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
                 <motion.img
                   src={img}
                   alt={`About Us ${index + 1}`}
-                  className="w-full h-64 md:h-72 object-cover"
+                  className="w-full h-64 md:h-auto object-"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5 }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute inset-0 " />
               </motion.div>
             ))}
           </div>
@@ -64,7 +72,7 @@ function AboutUs() {
               <span className="text-lg font-medium text-[#ff601c]">About Us</span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 flex items-center gap-3">
+            <h1 className="text-3xl lg:text-4xl font-bold mb-6 flex items-center gap-3">
               <span>Welcome to</span>
               <motion.img 
                 src={logo} 
@@ -132,6 +140,8 @@ function AboutUs() {
         </motion.div>
       </div>
     </motion.div>
+    </div>
+   
   );
 }
 

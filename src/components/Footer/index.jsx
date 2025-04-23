@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, ChevronRight, Home, Info, Utensils, Lock } from 'lucide-react';
+import yamo from  '../../assets/Ellipse 8.png';
+
 
 const Footer = () => {
   const footerItems = [
@@ -55,7 +57,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-gray-100 text-gray-800 pt-12 pb-6"
+      className="mt-2 text-gray-800  pb-6 relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -180,6 +182,7 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
+      <img src={yamo} className='absolute top-0'  alt="" />
     </motion.footer>
   );
 };

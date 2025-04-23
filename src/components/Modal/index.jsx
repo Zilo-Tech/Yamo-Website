@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavLinks from "../Header/Navbar/NavLinks";
 import logo from "../../assets/logo-bg.svg";
 import "./index.css";
+import { X } from "lucide-react";
 
 function Modal({ closeModal }) {
   const [isClosing, setIsClosing] = useState(false);
@@ -23,8 +24,8 @@ function Modal({ closeModal }) {
       >
         <div className="flex items-center justify-between mb-4">
           <img src={logo} width={40} alt="Logo" />
-          <button className="py-1 px-3 border rounded" onClick={handleClose}>
-            <i className="fas fa-2x text-green-500 fa-times"></i>
+          <button className="py-1 px-3 border rounded text-xs text-gray-900" onClick={handleClose}>
+            <X className="text-xs text-gray-600"/>
           </button>
         </div>
         <NavLinks />

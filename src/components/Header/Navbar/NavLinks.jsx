@@ -48,11 +48,7 @@ function NavLinks({ screenHeight }) {
       <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <button
           href="#"
-          className={`py-2 px-6 rounded-lg text-white font-semibold ${
-            screenHeight <= 40 || screenWidth <= 680
-              ? "bg-green-500 hover:bg-green-500 opacity-70"
-              : "border border-white hover:bg-[#444443]"
-          } transition-colors`}
+          className={`py-2 px-6 rounded-lg text-white font-semibold text-xs  bg-[#ff601c] `}
         >
           <span className="flex items-center gap-2">
             
