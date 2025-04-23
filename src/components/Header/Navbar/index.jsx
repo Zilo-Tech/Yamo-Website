@@ -9,7 +9,7 @@ function Navbar({ screenWidth, screenHeight, openModal }) {
       {screenWidth <= 680 ? (
         <motion.button 
           onClick={openModal} 
-          className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+          className="p-2 rounded-lg  hover:bg-white/20 transition-colors"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
