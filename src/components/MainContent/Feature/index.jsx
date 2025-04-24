@@ -41,7 +41,7 @@ const YamoApp = () => {
 
   return (
     <motion.div 
-      className="relative overflow-hidden border-none rounded-xl my-20 py-16"
+      className="relative bg-white overflow-hidden border-none rounded-xl my-20 py-36"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
