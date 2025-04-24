@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Yamo Preview v1.jpg'
+import img from '../../../assets/Yamo-Preview-v1.avif'
 
 export default function Img() {
   return (
