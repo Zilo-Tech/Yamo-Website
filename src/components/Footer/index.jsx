@@ -57,7 +57,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="mt-2 text-gray-800  pb-6 relative"
+      className="mt-2 text-gray-800 bg-white  pb-6 relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -142,7 +142,7 @@ const Footer = () => {
                         <img 
                           src={app.icon} 
                           alt={app.name} 
-                          className="h-12 w-auto object-contain"
+                          className="h-14 w-auto object-contain"
                         />
                       </motion.a>
                     ))}
