@@ -10,7 +10,7 @@ import YamoDownloadSection from "./YamoDownloadSection";
 
 const MainContent = () => {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full">
       <ServiceList />
       <AboutUs />
       <CardList />

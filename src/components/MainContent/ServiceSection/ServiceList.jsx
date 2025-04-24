@@ -28,7 +28,7 @@ function ServiceList() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-orange-50 to-green-[#ff601c] py-28 relative overflow-hidden   rounded-3xl">
+    <div className="py-28 relative overflow-hidden md:bg-[#ff601c0f]  rounded-3xl">
     
     
 

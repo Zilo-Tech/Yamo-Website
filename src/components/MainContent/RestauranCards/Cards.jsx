@@ -22,7 +22,7 @@ const cardVariants = {
 };
 
 const SkeletonElement = ({ className }) => (
-  <div className={`bg-gray-200 rounded-md animate-pulse ${className}`} />
+  <div className={`rounded-md animate-pulse ${className}`} />
 );
 
 export default function Cards({ 

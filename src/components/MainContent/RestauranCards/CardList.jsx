@@ -114,7 +114,7 @@ export default function CardList() {
     fetchRestaurants();
   }, []);
   return (
-    <div className=' bg-gradient-to-y from-[#ff601c22]] border-none relative'>
+    <div className='border-none relative'>
       <motion.div
         variants={containerVariants}
         initial="hidden"
