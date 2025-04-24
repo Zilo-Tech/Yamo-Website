@@ -39,7 +39,7 @@ function App() {
   }, [screenWidth, isModalOpen]);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header
         openModal={openModal}
         screenWidth={screenWidth}
