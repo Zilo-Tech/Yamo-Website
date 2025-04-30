@@ -33,7 +33,7 @@ export default function Hero() {
             >
               <Utensils className="w-8 h-8 text-white" />
             </motion.div>
-            <span className="text-lg font-medium text-white/90">Yamo - Food Delivery</span>
+            <span className="text-lg font-medium text-white/90">Yamo</span>
           </motion.div>
 
           <motion.h1
