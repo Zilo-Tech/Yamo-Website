@@ -6,7 +6,7 @@ import yamo from '../../../assets/Yamo/Yamo Preview.jpg';
 const YamoDownloadSection = () => {
   return (
     <motion.section 
-      className="bg-gray-100 text-gray-800 rounded-lg py-12 lg:py-20"
+      className=" border-none text-gray-800 rounded-lg py-12 lg:py-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Utensils, ChevronRight } from "lucide-react";
-import hero from "../../../assets/hero.png";
+import hero from "../../../assets/hero.webp";
 
 export default function Hero() {
   return (

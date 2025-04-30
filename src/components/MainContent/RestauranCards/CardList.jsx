@@ -7,6 +7,11 @@ import 'slick-carousel/slick/slick-theme.css';
 import { ChefHat, ChevronRight, ChevronLeft } from 'lucide-react';
 import Cards from './Cards';
 import { div } from 'framer-motion/client';
+import Delivery from '../../../assets/Delivery.png'
+import tracking from '../../../assets/tracking .png'
+import yamo from '../../../assets/Ellipse 9.png';
+
+
 
 const NextArrow = (props) => (
   <div {...props} className="slick-next-arrow">
@@ -74,7 +79,7 @@ export default function CardList() {
   const [loading, setLoading] = useState(true);
 
   const Title = () => (
-    <motion.div 
+    <motion.div
       className='text-center mt-10 mb-10'
     >
       <div className="flex items-center justify-center gap-2 mb-4">
@@ -83,8 +88,8 @@ export default function CardList() {
           Top Restaurants
         </h2>
       </div>
-      <motion.p 
-      
+      <motion.p
+
         className='text-gray-600 text-wrap text-center md:text-lg max-w-2xl mx-auto'
       >
         From gourmet cuisines to cozy cafés, explore restaurants that redefine taste and hospitality.
@@ -92,7 +97,7 @@ export default function CardList() {
     </motion.div>
   );
 
- 
+
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
@@ -109,26 +114,48 @@ export default function CardList() {
     fetchRestaurants();
   }, []);
   return (
-    <div className='bg-slate-100'>
-      <motion.div 
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className='container max-w-7xl mx-auto px-4 py-8'
-    >
-      <div className='container max-w-8xl mx-auto px-3'>
-        <Title />
-        <Slider {...settings}>
-          {restaurants.map((restaurant, index) => (
-            <Cards 
-              key={loading ? `skeleton-${index}` : restaurant.id} 
-              loading={loading} 
-              {...restaurant} 
-            />
-          ))}
-        </Slider>
+    <div className='border-none relative'>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className=' w-full   py-8'
+      >
+        <div className='w-full max-w-7xl mx-auto px-3'>
+          <Title />
+          <Slider {...settings}>
+            {restaurants.map((restaurant, index) => (
+              <Cards
+                key={loading ? `skeleton-${index}` : restaurant.id}
+                loading={loading}
+                {...restaurant}
+              />
+            ))}
+          </Slider>
+        </div>
+      </motion.div>
+      <img
+
+      />
+
+      <div className=' hidden lg:block mx-auto absolute -top-16 left-0'>
+        <motion.img
+          src={Delivery}
+          alt="Tracking illustration"
+          className="f"
+          animate={{
+            x: ["100%", "-100%"],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "linear",
+          }}
+        />
+        <img src={yamo} className='absolute' alt="" />
+        <img src={yamo} className='absolute left-1/2 bottom-0' alt="" />
       </div>
-    </motion.div>
     </div>
   );
 }

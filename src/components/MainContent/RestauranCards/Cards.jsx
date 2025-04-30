@@ -22,7 +22,7 @@ const cardVariants = {
 };
 
 const SkeletonElement = ({ className }) => (
-  <div className={`bg-gray-200 rounded-md animate-pulse ${className}`} />
+  <div className={`rounded-md animate-pulse ${className}`} />
 );
 
 export default function Cards({ 
@@ -117,7 +117,7 @@ export default function Cards({
           ) : (
             <motion.a
               href="#"
-              className="bg-gradient-to-r from-green-400 to-green-500 font-medium px-5 py-2 rounded-lg text-white flex items-center  justify-center gap-1 w-3/4 mx-auto"
+              className="bg-green-500 font-medium px-5 py-2 rounded-lg text-white flex items-center  justify-center gap-1 w-3/4 mx-auto"
             
             >
               <CalendarDays className="w-4 h-4" />
