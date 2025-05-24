@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import MainContent from "./components/MainContent";
+import Footer from './components/Footer'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,8 +15,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
-      if (window.innerWidth > 680 && isModalOpen) {
-        closeModal(); // Automatically close modal on larger screens
+      if (isModalOpen) {
         document.body.style.overflow = "auto"; // Re-enable scroll
       }
     };
@@ -39,7 +39,7 @@ function App() {
   }, [screenWidth, isModalOpen]);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header
         openModal={openModal}
         screenWidth={screenWidth}
@@ -47,6 +47,7 @@ function App() {
       />
       {isModalOpen && screenWidth <= 680 && <Modal closeModal={closeModal} />}
       <MainContent />
+      <Footer/>
     </div>
   );
 }

@@ -1,13 +1,23 @@
 import AboutUs from "./AboutUs/AboutUs";
-import ServiceList from "./ServiceSection/ServiceList";
+import Contact from "./Contact";
 import ContactForm from "./ContactForm";
+import YamoApp from "./Feature";
+import Img from "./Img";
+import CardList from "./RestauranCards/CardList";
+import ServiceList from "./ServiceSection/ServiceList";
+import YamoDownloadSection from "./YamoDownloadSection";
+
 
 const MainContent = () => {
   return (
-    <div className="container max-w-6xl mx-auto px-4">
+    <div className="w-full overflow-hidden">
       <ServiceList />
       <AboutUs />
-      <ContactForm />
+      <CardList />
+      <YamoApp />
+      <YamoDownloadSection />
+      <Img />
+      {/* <ContactForm /> */}
     </div>
   );
 };

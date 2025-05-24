@@ -1,7 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { motion } from "framer-motion";
+import { CalendarDays, Mail, MessageSquare, User, Utensils } from "lucide-react";
 
 const schema = z.object({
   name: z.string().min(3, "Name must be at least 3 characters"),
@@ -10,90 +11,184 @@ const schema = z.object({
     .string()
     .nonempty("Date & Time are required")
     .refine((val) => !isNaN(new Date(val).getTime()), "Invalid date"),
+  guests: z.string().min(1, "Please select number of guests"),
   message: z.string().min(1, "Message is required"),
 });
+
+const inputVariants = {
+  focus: {
+    boxShadow: "0 0 0 2px rgba(72, 187, 120, 0.5)",
+    borderColor: "#48bb78",
+    transition: { duration: 0.2 }
+  }
+};
 
 function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({ resolver: zodResolver(schema) });
 
   const onSubmit = (data) => {
     console.log("Form Data Submitted:", data);
-    // Convert datetime to a Date object if necessary
     data.datetime = new Date(data.datetime);
     console.log("Transformed Data:", data);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`bg-gray-800 p-2`}>
-      <div className="max-w-md mx-auto">
-        <div className="header mb-4">
-          <div className={`text-orange-500 italic font-bold`}>Reservation</div>
-          <h1 className={`font-bold text-2xl text-white`}>Book a table online</h1>
+    <motion.form 
+      onSubmit={handleSubmit(onSubmit)}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white rounded-lg  p-6 max-w-2xl mx-auto"
+    >
+      <div className="header mb-6">
+        <div className="flex items-center gap-2 mb-2">
+          <Utensils className="w-6 h-6 text-orange-500" />
+          <h1 className="text-2xl font-bold text-gray-800">Book a table online</h1>
         </div>
-        <div className={`flex items-center space-x-4 mb-4`}>
-          <div>
-            <input
-              {...register("name", { required: "Name is required" })}
-              type="text"
-              placeholder="Your Name"
-              className="p-2 border focus:outline outline-orange-500 flex-1 rounded"
-            />
-            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
-          </div>
-          <div>
-            <input
-              {...register("email", { required: "Email required" })}
-              type="email"
-              placeholder="Your Email"
-              className="p-2 border focus:outline outline-orange-500 flex-1 rounded"
-            />
-            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
-          </div>
-        </div>
-        <div className={`flex items-center space-x-4 mb-4`}>
-          <div>
-            <input
-              {...register("datetime", { required: "Date & Time are required" })}
-              type="datetime-local"
-              className="p-2 border focus:outline outline-orange-500 flex-1 rounded"
-            />
-            {errors.datetime && <p className="text-red-500">{errors.datetime.message}</p>}
-          </div>
-          <div>
-            <select
-             
-              defaultValue=""
-              name="nofpeople"
-              className="p-2 border focus:outline outline-orange-500 flex-1 rounded"
-            >
-              <option value="" disabled>
-                Number of people
-              </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-            {errors.nOfPeople && <p className="text-red-500">{errors.nOfPeople.message}</p>}
-          </div>
-        </div>
-        <div className="mb-4 flex">
-          <div>
-            <textarea
-              {...register("message", { required: "Message is required" })}
-              placeholder="Your Message"
-              className="p-2 border focus:outline outline-orange-500 w-full rounded"
-            ></textarea>
-            {errors.message && <p className="text-red-500">{errors.message.message}</p>}
-          </div>
-        </div>
-        <button type="submit" className="bg-green-500 p-2 text-white font-semibold rounded w-full">
-          Book Now
-        </button>
+        <p className="text-gray-600">Make your reservation in just a few clicks</p>
       </div>
-    </form>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label className="block text-gray-700 mb-1 flex items-center gap-2">
+            <User className="w-4 h-4 text-orange-500" />
+            Your Name
+          </label>
+          <motion.input
+            {...register("name")}
+            type="text"
+            placeholder="John Doe"
+            className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none"
+            whileFocus="focus"
+            variants={inputVariants}
+          />
+          {errors.name && (
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-500 text-sm mt-1"
+            >
+              {errors.name.message}
+            </motion.p>
+          )}
+        </div>
+
+        <div>
+          <label className="block text-gray-700 mb-1 flex items-center gap-2">
+            <Mail className="w-4 h-4 text-orange-500" />
+            Your Email
+          </label>
+          <motion.input
+            {...register("email")}
+            type="email"
+            placeholder="john@example.com"
+            className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none"
+            whileFocus="focus"
+            variants={inputVariants}
+          />
+          {errors.email && (
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-500 text-sm mt-1"
+            >
+              {errors.email.message}
+            </motion.p>
+          )}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label className="block text-gray-700 mb-1 flex items-center gap-2">
+            <CalendarDays className="w-4 h-4 text-orange-500" />
+            Date & Time
+          </label>
+          <motion.input
+            {...register("datetime")}
+            type="datetime-local"
+            className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none"
+            whileFocus="focus"
+            variants={inputVariants}
+          />
+          {errors.datetime && (
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-500 text-sm mt-1"
+            >
+              {errors.datetime.message}
+            </motion.p>
+          )}
+        </div>
+
+        <div>
+          <label className="block text-gray-700 mb-1 flex items-center gap-2">
+            <User className="w-4 h-4 text-orange-500" />
+            Number of Guests
+          </label>
+          <motion.select
+            {...register("guests")}
+            className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none"
+            whileFocus="focus"
+            variants={inputVariants}
+          >
+            <option value="" disabled>Select guests</option>
+            {[1, 2, 3, 4, 5, 6].map(num => (
+              <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
+            ))}
+          </motion.select>
+          {errors.guests && (
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-500 text-sm mt-1"
+            >
+              {errors.guests.message}
+            </motion.p>
+          )}
+        </div>
+      </div>
+
+      <div className="mb-6">
+        <label className="block text-gray-700 mb-1 flex items-center gap-2">
+          <MessageSquare className="w-4 h-4 text-orange-500" />
+          Special Requests
+        </label>
+        <motion.textarea
+          {...register("message")}
+          placeholder="Any special requirements?"
+          rows={4}
+          className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none"
+          whileFocus="focus"
+          variants={inputVariants}
+        />
+        {errors.message && (
+          <motion.p 
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-red-500 text-sm mt-1"
+          >
+            {errors.message.message}
+          </motion.p>
+        )}
+      </div>
+
+      <motion.button
+        type="submit"
+        disabled={isSubmitting}
+        className="bg-[#ff601c] text-white font-semibold py-3 px-6 rounded-lg w-full flex items-center justify-center gap-2"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <CalendarDays className="w-5 h-5" />
+        {isSubmitting ? "Processing..." : "Book Now"}
+      </motion.button>
+    </motion.form>
   );
 }
 
