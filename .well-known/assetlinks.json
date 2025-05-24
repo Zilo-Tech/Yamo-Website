@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.zilotech.yamo",
+      "sha256_cert_fingerprints": [
+        "F8:50:81:09:C6:12:0B:51:00:6F:63:69:08:86:FA:77:79:ED:D8:D3:66:DF:91:08:88:63:B9:83:D4:86:48:08"
+      ]
+    }
+  }
+]
